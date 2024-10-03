@@ -1,6 +1,13 @@
-local character = game.Players.LocalPlayer.Character
-local humanoid = character:WaitForChild("Humanoid")
+local playersAllowed = {
+    [4298015048] = true,
+    [98765432] = true,
+}
 
-humanoid.RootPart.Anchored = true
-wait(10)
-humanoid.RootPart.Anchored = false
+local localPlayer = game.Players.LocalPlayer
+local character = localPlayer.Character
+local humanoid = character:WaitForChild("Humanoid")
+if playersAllowed[localPlayer.UserId] then
+    humanoid.RootPart.Anchored = true
+    wait(10)
+    humanoid.RootPart.Anchored = false
+end
