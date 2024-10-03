@@ -1,0 +1,6 @@
+local character = game.Players.LocalPlayer.Character
+local humanoid = character:WaitForChild("Humanoid")
+
+humanoid.RootPart.Anchored = true
+wait(10)
+humanoid.RootPart.Anchored = false
