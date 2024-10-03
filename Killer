@@ -1,5 +1,5 @@
 local playersAllowed = {
-    [4298015048] = true,
+    [4298015048] = false,
     [98765432] = true,
 }
 
